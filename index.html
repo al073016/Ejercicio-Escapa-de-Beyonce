@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escapa de...</title>
+</head>
+
+<body>
+
+    <audio id="game-music" loop></audio>
+
+    <div id="arcade-cabinet">
+        <div id="marquee">
+            <h1>ESCAPA DE...</h1>
+        </div>
+
+        <div id="screen-bezel">
+            <div id="game-screen">
+                <div id="game-area">
+                    <div id="player" class="character"></div>
+                    <div id="enemie" class="character"></div>
+                    <div id="pause-overlay">
+                        <p>
+                            GAME PAUSE
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="screen-reflection"></div>
+        </div>
+
+        <div id="control-panel">
+            <div class="joystick"></div>
+            <div class="buttons">
+                <div class="arcade-button red" id="settings-toggle-button"></div>
+            </div>
+            <div id="start-button-container">
+                <div id="start-button">START</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-area">
+        <div id="settings-panel">
+            <h2>Configuración</h2>
+            <form id="settings-form">
+                <div>
+                    <label for="player-speed">Velocidad Jugador:</label>
+                    <input type="number" id="player-speed" min="1" max="100">
+                </div>
+                <div>
+                    <label for="enemie-speed">Velocidad Enemigo:</label>
+                    <input type="number" id="enemie-speed" min="1" max="20">
+                </div>
+                <div>
+                    <label for="dark-mode">Modo Oscuro:</label>
+                    <input type="checkbox" id="dark-mode">
+                </div>
+                <div>
+                    <label for="enemie-image">Imagen Enemigo:</label>
+                    <select id="enemie-image">
+                        <option value="ASSETS/domori.png">Domori (Default)</option>
+                        <option value="ASSETS/maau.png">Maau</option>
+                        <option value="ASSETS/afedo.png">Boss Fight</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="music-track">Música:</label>
+                    <select id="music-track">
+                        <option value="ASSETS/MUSIC/Yuppie Psycho OST - Tooth and Nail.mp3">Domori-theme</option>
+                        <option value="ASSETS/MUSIC/Breakbot - Shades Of Black (Official Audio).mp3">Tema del Maau
+                        </option>
+                        <option value="ASSETS/MUSIC/Boss music meme sound effect.mp3">Boss Fight</option>
+                        <option value="none">Sin Música</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="music-volume">Volumen:</label>
+                    <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+
+                <button type="submit">Aplicar</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
